@@ -20,8 +20,7 @@
 
 pack = value_for_platform([ "centos", "redhat", "fedora", "suse", "amazon" ] => {"default" => "php-pecl-apc"}, "default" => "php5-apc")
 
-if pack
-  package pack do
-    action :upgrade
-  end
+package pack do
+  action :upgrade
+  only_if { pack }
 end
