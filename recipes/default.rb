@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
+include_recipe "apache2::default"
 include_recipe "php5::module_mysql"
 include_recipe "php5::module_apc"
 include_recipe "php5::module_gd"
@@ -34,6 +35,6 @@ packages = [ "php", "php-cli", "php-common", "php-Smarty", ]
 
 packages.each do |pkg|
   package pkg do
-    action :upgrade
+    action [:install,:upgrade]
   end
 end

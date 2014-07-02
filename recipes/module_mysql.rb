@@ -20,5 +20,5 @@
 pack = value_for_platform([ "centos", "redhat", "fedora", "suse", "amazon" ] => {"default" => "php-mysql"}, "default" => "php5-mysql")
 
 package pack do
-  action :upgrade
+  action [:install,:upgrade]
 end

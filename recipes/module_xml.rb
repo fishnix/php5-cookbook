@@ -20,5 +20,5 @@
 pack = value_for_platform([ "centos", "redhat", "fedora", "suse", "amazon" ] => {"default" => "php-xml"}, "default" => "php5-xml")
 
 package pack do
-  action :upgrade
+  action [:install, :upgrade]
 end

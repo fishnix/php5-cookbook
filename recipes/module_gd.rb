@@ -20,5 +20,5 @@
 pack = value_for_platform([ "centos", "redhat", "fedora", "suse", "amazon" ] => {"default" => "php-gd"}, "default" => "php5-gd")
 
 package pack do
-  action :upgrade
+  action [:install,:upgrade]
 end

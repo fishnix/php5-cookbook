@@ -17,5 +17,5 @@
 # limitations under the License.
 #
 package "php-pecl-memcache" do
-  action :upgrade
+  action [:install,:upgrade]
 end
